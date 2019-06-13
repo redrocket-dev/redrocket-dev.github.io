@@ -20,7 +20,9 @@
           </nav>
         </div>
       </transition>
-      <div @click="sidebar = false" v-if="sidebar" class="menu_mobile_back"></div>
+      <transition name="fade">
+        <div @click="sidebar = false" v-if="sidebar" class="menu_mobile_back"></div>
+      </transition>
       <div @click="sidebar = true" class="menu_mobile__btn">
         <img src="../assets/menu_btn.svg" alt="menu button">
       </div>
@@ -84,6 +86,23 @@ export default {
     }
     100% {
       right: 0;
+    }
+  }
+
+  .fade-enter-active {
+    animation: fade-in 0.25s;
+  }
+
+  .fade-leave-active {
+    animation: fade-in 0.25s reverse;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
