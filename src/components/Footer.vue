@@ -45,23 +45,42 @@
 <style lang="scss" scoped>
 footer {
   background-color: #131313;
-  height: 25rem;
+  min-height: 25rem;
   color: #fff;
   padding: 20px;
+  @media screen and (max-width: 600px) {
+    padding: 3rem 0;
+  }
   .footer_container {
     width: 84%;
     height: 80%;
     display: flex;
     align-items: center;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
     .footer_inner {
       width: 75%;
       max-width: 1080px;
       margin: 0 auto;
       display: flex;
+      margin-top: 5%;
+      @media screen and (max-width: 600px) {
+        height: 100%;
+        margin-top: 0;
+        flex-wrap: wrap;
+      }
       justify-content: space-between;
       align-items: flex-start;
       .pane {
         min-width: 190px;
+        @media screen and (max-width: 600px) {
+          height: unset;
+          width: 100%;
+          &:not(:first-of-type) {
+            margin-top: 20px;
+          }
+        }
         /* width: 30%; */
         height: 60%;
         .footer_title {

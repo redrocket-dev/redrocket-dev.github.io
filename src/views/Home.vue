@@ -82,6 +82,7 @@
       <div class="section_title">
         <h1 class="title">멋지게 날아오를 로켓에 함께 하실</h1>
         <h1 class="title">열정 넘치는 팀원들을 구합니다.</h1>
+        <p class="content">문은 언제든 열려있습니다!</p>
         <p class="content">
           <router-link to="/career" class="read_more">함께하기</router-link>
         </p>
@@ -115,8 +116,17 @@ export default {};
     &.background-orange {
       background-color: #f8b500;
     }
+    @media screen and (max-width: 600px) {
+      min-height: unset;
+    }
     .section_title {
       width: 84%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 600px) {
+        padding: 2rem 0;
+      }
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -133,6 +143,9 @@ export default {};
         &:hover {
           opacity: 0.6;
         }
+        @media screen and (max-width: 600px) {
+          margin: 1rem 0;
+        }
       }
     }
   }
@@ -144,6 +157,14 @@ export default {};
     font-weight: 200;
     letter-spacing: -2px;
     line-height: 1.3;
+    word-break: keep-all;
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 90%;
+      font-size: 23px;
+    }
   }
   .subtitle {
     width: 75%;
@@ -160,8 +181,13 @@ export default {};
     font-size: 20px;
     font-weight: 200;
     line-height: 1.3;
+    word-break: keep-all;
     &:first-of-type {
       margin-top: 20px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 90%;
+      font-size: 16px;
     }
   }
   .rocket {
@@ -181,11 +207,25 @@ export default {};
     width: 75%;
     max-width: 1080px;
     margin: 0 auto 20px;
+    @media screen and (max-width: 600px) {
+      width: 90%;
+      justify-content: space-between;
+    }
     .member {
       padding: 20px 20px 20px 0;
       width: 24%;
+      @media screen and (max-width: 1024px) {
+        width: 33%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 47%;
+        padding: 20px 0;
+      }
       img {
         width: 80%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
         margin-bottom: 5px;
       }
       h4,

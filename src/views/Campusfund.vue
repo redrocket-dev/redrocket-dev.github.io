@@ -48,6 +48,9 @@ export default {};
     justify-content: space-between;
     width: 100%;
     padding: 20px;
+    @media screen and (max-width: 600px) {
+      min-height: unset;
+    }
     &.background-orange {
       background-color: #f8b500;
     }
@@ -58,6 +61,12 @@ export default {};
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 600px) {
+        padding: 2rem 0;
+      }
     }
   }
   .title {
@@ -68,6 +77,14 @@ export default {};
     font-weight: 200;
     letter-spacing: -2.5px;
     line-height: 1.3;
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+      word-break: keep-all;
+    }
+    @media screen and (max-width: 600px) {
+      width: 90%;
+      font-size: 23px;
+    }
   }
   .content {
     width: 75%;
@@ -78,6 +95,10 @@ export default {};
     line-height: 1.3;
     &:first-of-type {
       margin-top: 20px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 90%;
+      font-size: 16px;
     }
   }
 }
