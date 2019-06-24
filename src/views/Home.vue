@@ -33,47 +33,15 @@
       <div class="section_title">
         <h1 class="title">레드로켓 팀을 소개합니다.</h1>
         <div class="members">
-          <div class="member">
-            <img src="https://via.placeholder.com/180x240">
-            <h4>박태홍</h4>
-            <h5>CEO</h5>
-            <a class="more_btn">자세히</a>
-          </div>
-          <div class="member">
-            <img src="../assets/woonjang.jpg">
-            <h4>안운장</h4>
-            <h5>Web Developer</h5>
-            <a class="more_btn">자세히</a>
-          </div>
-          <div class="member">
-            <img src="../assets/chunghwan.jpg">
-            <h4>윤충환</h4>
-            <h5>Credit Model Developer</h5>
-            <a class="more_btn">자세히</a>
-          </div>
-          <div class="member">
-            <img src="../assets/dahyun.jpg">
-            <h4>배다현</h4>
-            <h5>Content Creator</h5>
-            <a class="more_btn">자세히</a>
-          </div>
-          <div class="member">
-            <img src="https://via.placeholder.com/180x240">
-            <h4>김지하</h4>
-            <h5>Growth Marketer</h5>
-            <a class="more_btn">자세히</a>
-          </div>
-          <div class="member">
-            <img src="https://via.placeholder.com/180x240">
-            <h4>김혜미</h4>
-            <h5>Customer Officer</h5>
-            <a class="more_btn">자세히</a>
-          </div>
-          <div class="member">
-            <img src="../assets/soomin.jpg">
-            <h4>박수민</h4>
-            <h5>Customer Officer</h5>
-            <a class="more_btn">자세히</a>
+          <div v-for="member in members" class="member" :key="member.name">
+            <img :src="member.img">
+            <h4>{{ member.name }}</h4>
+            <h5>{{ member.role }}</h5>
+            <a
+              class="more_btn"
+              @click="member.desc_more = !member.desc_more"
+            >{{member.desc_more ? '접기' : "자세히"}}</a>
+            <div v-if="member.desc_more" class="member__desc">{{ member.desc }}</div>
           </div>
         </div>
       </div>
@@ -92,7 +60,78 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      members: [
+        {
+          name: "박태홍",
+          img: require("../assets/taehong.jpeg"),
+          role: "CEO",
+          desc_more: false,
+          desc:
+            "태홍님은 캠퍼스펀드에서 대표의 업무를 맡고 있습니다. 레드로켓이 핀테크 기업으로써 지속해서 성장할 수 있도록 끊임없이 고민하는 역할을 하고 있습니다. 이전에는 에듀캐스트 마케팅 담당으로 활동을 하며 경험을 쌓았으며, 스쿠터홀릭을 창업한 경험이 있습니다. 스토리투자라는 유튜브 채널도 운영 중입니다."
+        },
+        {
+          name: "최우형",
+          img: require("../assets/uhyung.jpeg"),
+          role: "Managing Director",
+          desc_more: false,
+          desc:
+            "레드로켓의 정신적 지주이자 전략을 담당하고 있는 우형님입니다. 대학생 때 컴퓨터와 벤처학을 공부한 것을 바탕으로 레드로켓의 전반적인 사업과 IT 부문 양쪽에서의 전략을 견인하고 있습니다."
+        },
+        {
+          name: "안운장",
+          img: require("../assets/profile-placeholder.jpg"),
+          role: "Web Developer",
+          desc_more: false,
+          desc:
+            "운장님은 캠퍼스펀드 개발팀에서 고객과 비즈니스를 이어주는 플랫폼을 개발하고 있습니다. 이전에는 멋쟁이사자처럼이라는 프로그래밍 교육단체에서 3년간 CS 비전공자 학생들과 직장인들을 교육했으며, (주)드리머리에서 프론트엔드 개발을 맡았습니다."
+        },
+        {
+          name: "윤충환",
+          img: require("../assets/chunghwan.jpeg"),
+          role: "Credit Model Developer",
+          desc_more: false,
+          desc:
+            "충환님은 캠퍼스펀드 개발팀에서 다양한 데이터를 분석하고 활용하여 금융 서비스를 제공하고 있습니다. 또한 신용 모델 개발을 통해 캠퍼스펀드의 대출채권과 투자가 수익률이 높고 안정적인 금융서비스가 될 수 있도록 합니다."
+        },
+        {
+          name: "배다현",
+          img: require("../assets/dahyun.jpeg"),
+          role: "Content Creator",
+          desc_more: false,
+          desc:
+            "다현님은 캠퍼스펀드에서 콘텐츠 마케팅과 브랜딩 업무를 맡고 있습니다. 복잡한 금융상품에 대한 고객의 이해를 돕고, P2P금융의 가치와 기술을 보다 쉽고 매력적으로 전달하기 위해 노력하고 있습니다. 캠퍼스펀드 이전에는 광고대행사에서 다양한 콘텐츠 마케팅과 디지털마케팅을 진행하며 경험을 쌓았으며, 롯데푸드, 종근당건강 등의 소셜 콘텐츠 제작자로 업무를 수행했습니다."
+        },
+        {
+          name: "김지하",
+          img: require("../assets/jiha.jpeg"),
+          role: "Growth Marketer",
+          desc_more: false,
+          desc:
+            "지하님은 캠퍼스펀드 마케팅 전략을 담당하고 있습니다. 그로스해킹을 이용하여 각종 마케팅이 효율적으로 집행될 수 있도록 하고 있으며, 고객 맞춤형 전략을 통해 캠퍼스펀드 서비스가 필요한 고객에게 더 가까워질 수 있도록 하고 있습니다."
+        },
+        {
+          name: "김혜미",
+          img: require("../assets/hyemi.jpeg"),
+          role: "Customer Officer",
+          desc_more: false,
+          desc:
+            "혜미님은 캠퍼스펀드에서 고객응대 및 운영을 맡고 있습니다. 고객이 편리하게 서비스를 이용할 수 있도록 서비스 전반에 대해 쉽고 간단하게 안내해드리고 있습니다. 캠퍼스펀드 이전에는 신한은행에서 근무하며 금융권 경험을 쌓았으며 창구에서 직접 고객을 응대하며 CS, VOC 관리에 대한 전문성을 쌓았습니다."
+        },
+        {
+          name: "박수민",
+          img: require("../assets/soomin.jpeg"),
+          role: "Customer Officer",
+          desc_more: false,
+          desc:
+            "수민님은 캠퍼스펀드 운영팀에서 내외부적으로 캠퍼스펀드가 효율적으로 운영될 수 있도록 다양한 서비스를 제공하고 있습니다. 보다 신속하고 정확한 서비스 제공을 위해 운영 고도화에 주력하고 있습니다."
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -238,6 +277,14 @@ export default {};
         font-size: 0.75rem;
         padding: 0;
         cursor: pointer;
+      }
+      .member__desc {
+        width: 80%;
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
   }

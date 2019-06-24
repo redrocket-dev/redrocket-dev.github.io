@@ -5,17 +5,17 @@
         <div class="pane">
           <div class="footer_title">(주)레드로켓</div>
           <ul class="footer_content">
-            <li>서울시 마포구 화양로 26 204호</li>
-            <li>사업자번호:</li>
-            <li>전화:</li>
-            <li>팩스:</li>
+            <li>서울시 마포구 양화로 26 204호</li>
+            <li>사업자번호 : 404-86-00211</li>
+            <li>TEL : 02-923-0213</li>
+            <li>FAX : 02-336-0429</li>
           </ul>
         </div>
         <div class="pane">
           <div class="footer_title">서비스</div>
           <ul class="footer_content">
             <li>
-              <a href="https://campusfund.net/">캠퍼스펀드 WEB</a>
+              <a href="https://campusfund.net/" target="_blank">캠퍼스펀드 WEB</a>
             </li>
             <li>
               <a href="https://blog.naver.com/campusfund">캠퍼스펀드 블로그</a>
@@ -26,13 +26,13 @@
           <div class="footer_title">문의</div>
           <ul class="footer_content">
             <li>
-              <a href="#">서비스</a>
+              <a href="https://campusfund.net/cs" target="_blank">서비스</a>
             </li>
             <li>
-              <a href="#">채용</a>
+              <router-link to="/career#">채용</router-link>
             </li>
             <li>
-              <a href="#">제휴</a>
+              <a href="https://campusfund.net/cs" target="_blank">제휴</a>
             </li>
           </ul>
         </div>

@@ -5,6 +5,9 @@
         <h1 class="title">꿈을 위해 열심히 달려온 사람들은</h1>
         <h1 class="title">더 좋은 금융을 누릴 자격이 있습니다.</h1>
         <h1 class="title">그래서 우린 캠퍼스펀드를 만들었습니다.</h1>
+        <p class="content">
+          <a href="https://campusfund.net/" target="_blank" class="read_more">서비스 바로가기</a>
+        </p>
       </div>
       <!-- <div class="rocket">
         <img src="../assets/rocket.svg" alt="rocket">
@@ -17,7 +20,7 @@
         <p class="content">대출이 증가하며 데이터들이 축적되고 이를 바탕으로 정확하게 학생들의 미래상환능력을 판단합니다.</p>
       </div>
     </div>
-    <div class="section">
+    <div class="section background-orange">
       <div class="section_title">
         <h1 class="title">캠퍼스펀드는 새로운 재테크 대안입니다.</h1>
         <p class="content">초저금리 시대에 재테크로 수익을 내는 것은 쉽지 않습니다.</p>
@@ -66,6 +69,21 @@ export default {};
       }
       @media screen and (max-width: 600px) {
         padding: 2rem 0;
+      }
+      a.read_more {
+        display: inline-block;
+        border: 1px solid #131313;
+        padding: 0.5rem 2rem;
+
+        background-color: #131313;
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+          opacity: 0.6;
+        }
+        @media screen and (max-width: 600px) {
+          margin: 1rem 0;
+        }
       }
     }
   }

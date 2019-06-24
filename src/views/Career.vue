@@ -42,6 +42,9 @@
             </div>
           </ul>
         </div>
+        <p class="content">
+          <a href="mailto:career@redrocket.co.kr" class="read_more">지금 지원하기</a>
+        </p>
       </div>
     </div>
   </div>
@@ -173,7 +176,7 @@ export default {
         display: inline-block;
         border: 1px solid #131313;
         padding: 0.5rem 2rem;
-        margin: 2rem 0;
+
         background-color: #131313;
         color: #fff;
         text-decoration: none;
