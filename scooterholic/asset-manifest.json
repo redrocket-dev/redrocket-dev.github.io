@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/scooterholic/static/css/main.d3647218.chunk.css",
+    "main.js": "/scooterholic/static/js/main.8ca52e2c.chunk.js",
+    "main.js.map": "/scooterholic/static/js/main.8ca52e2c.chunk.js.map",
+    "runtime~main.js": "/scooterholic/static/js/runtime~main.efa3e0d5.js",
+    "runtime~main.js.map": "/scooterholic/static/js/runtime~main.efa3e0d5.js.map",
+    "static/js/2.210345e0.chunk.js": "/scooterholic/static/js/2.210345e0.chunk.js",
+    "static/js/2.210345e0.chunk.js.map": "/scooterholic/static/js/2.210345e0.chunk.js.map",
+    "index.html": "/scooterholic/index.html",
+    "precache-manifest.214a65d6dc6209079b2a5541e3da4e1e.js": "/scooterholic/precache-manifest.214a65d6dc6209079b2a5541e3da4e1e.js",
+    "service-worker.js": "/scooterholic/service-worker.js",
+    "static/css/main.d3647218.chunk.css.map": "/scooterholic/static/css/main.d3647218.chunk.css.map",
+    "static/media/about-cover.jpg": "/scooterholic/static/media/about-cover.dd1b8ed4.jpg",
+    "static/media/dropdown-arrow.svg": "/scooterholic/static/media/dropdown-arrow.023985eb.svg",
+    "static/media/hamburger.svg": "/scooterholic/static/media/hamburger.1ae2f0db.svg",
+    "static/media/landing-cover.jpg": "/scooterholic/static/media/landing-cover.0392d277.jpg"
+  }
+}
